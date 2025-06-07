@@ -41,7 +41,7 @@ cd supabase-doc-api
 ### 2. Install dependencies
 
 ```bash
-npm install
+npm install dotenv express cors multer @supabase/supabase-js node-fetch
 ```
 
 ### 3. Rename `.env.example` file to `.env`
@@ -69,6 +69,20 @@ node index.js
 * Click `New bucket`
 * Set bucket name: `cloud`
 * Make it **public** or adjust RLS policies as needed
+
+### 🔐 Get Your Supabase Service Role Key
+
+To use Supabase Admin features like uploading to storage or writing to the database securely, you’ll need your project's **Service Role Key**:
+
+1. Go to [https://app.supabase.com](https://app.supabase.com) and select your project.
+2. Navigate to **Settings → API**.
+3. Scroll down to **Project API keys**.
+4. Copy the `service_role` key (**keep it secret**, never expose it on the frontend).
+5. Paste it in your `.env` file like this:
+
+```env
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+```
 
 ### 📄 Create `documents` Table
 
