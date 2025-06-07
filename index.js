@@ -1,5 +1,5 @@
 import express from "express";
-import supabaseRoutes from "./supabaseRoutes.js"; // assuming saved from above
+import supabaseRoutes from "./supabaseRoutes.js";
 
 const app = express();
 app.use("/api", supabaseRoutes);
